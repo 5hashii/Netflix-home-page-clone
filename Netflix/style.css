@@ -17,6 +17,7 @@ body{
     background-position: center;
     padding: 10px 8%;
     position: relative;
+    
 }
 nav{
     display: flex;
@@ -72,34 +73,43 @@ nav button{
     font-weight: 400;
     margin-bottom: 20px;
 }
-.email-sinup{
-    background: white;
-    border-radius: 4px;
+/* Style for Email Signup in Header */
+.email-sinup {
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    overflow: hidden;
+    margin-top: 20px; /* Adjust as needed */
 }
-.email-sinup input{
-    flex: 1;
-    border: 0;
-    outline: 1;
-    margin-left: 20px;
+
+.email-sinup input[type="email"] {
+    border: 1px solid #db0001; /* Red border */
+    border-radius: 4px;
+    padding: 12px 20px; /* Increased padding */
+    margin-right: 10px;
+    font-size: 16px; /* Increased font size */
+    flex: 1; /* Take up remaining space */
 }
-.email-sinup button{
-    background: #db0001;
-    border: 0;
-    outline: 0;
+
+.email-sinup button[type="submit"] {
+    background-color: #db0001; /* Red background */
     color: white;
-    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 30px; /* Increased padding */
+    font-size: 16px; /* Increased font size */
     cursor: pointer;
-    padding: 15px 30px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+.email-sinup button[type="submit"]:hover {
+    background-color: #b80000; /* Darker red background on hover */
+}
+
 
 /* _________________________________________ FEATURES SECTION _________________________________________ */
 
 .features{
     padding: 50px 12%;
+    border-top: 6px solid #333;
 }
 .row{
     display: flex;
@@ -133,6 +143,7 @@ nav button{
     padding: 10px 12%;
     text-align: center;
     font-size: 18px;
+    border-top: 6px solid #333;
 }
 .faq h2{
     font-family: 700;
@@ -185,4 +196,104 @@ input[type="radio"]{
 }
 .faq small{
     font-size: 13px;   
+}
+
+/* __________________________________ Footer ______________________________________________________ */
+
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer .down-icon {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+}
+.footer p{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    /* Adjustments for tablets */
+    .header-content {
+        margin-top: 50px;
+    }
+    
+    .features h1,
+    .faq h2,
+    .footer h2 {
+        font-size: 30px;
+    }
+
+    .accordion li label {
+        font-size: 18px;
+    }
+
+    .email-signup {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    /* Adjustments for desktops */
+    .header-content {
+        margin-top: 100px;
+    }
+
+    .features {
+        padding: 50px 10%;
+    }
+
+    .footer {
+        padding: 40px 15%;
+    }
+
+    .footer .col {
+        flex-basis: 25%;
+    }
 }
