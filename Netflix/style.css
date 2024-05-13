@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('back.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.down-icon{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+}
+.down-icon img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size:30px;
+    font-weight: 800;
+    line-height: 50px; 
+}
+.header-content h3{ 
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.email-sinup{
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.email-sinup input{
+    flex: 1;
+    border: 0;
+    outline: 1;
+    margin-left: 20px;
+}
+.email-sinup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/* _________________________________________ FEATURES SECTION _________________________________________ */
+
+.features{
+    padding: 50px 12%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20%;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20%;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ___________________________________________FAQS________________________________________________________ */
+
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-family: 700;
+    font-size: 40px;
+}
+.accordion .content {
+    background-color: #1e1e1e; 
+    /* padding: 20px; */
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .email-sinup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;   
+}
